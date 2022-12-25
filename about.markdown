@@ -12,6 +12,8 @@ My Interests include
 2. Compilers 
 3. Machine Learning
 
+<object height="900" width="100%" data="https://nbviewer.org/github/ajprabhu09/resume/blob/master/AjinkyaPrabhu.pdf" type='application/pdf'></object>
+
 
 <!-- 
 You can find the source code for Minima at GitHub:
