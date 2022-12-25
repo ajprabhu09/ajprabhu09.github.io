@@ -1,7 +1,9 @@
 ---
 layout: post
-title:  "Welcome to My Page!"
-date:   2022-08-07 22:10:58 +0530
-categories: jekyll update
+title:  "What this is..."
+date: Sun Dec 25 05:53:26 EST 2022
+# categories: in
 ---
-Hello My name is Ajinkya
+Hello My name is Ajinkya and welcome to my github page. if you stumbled here looking for some technical stuff, you've come to the right place. I will be posting on stuff Im working on during my coursework or other shenanigans!
+
+I hope to post (almost) week here so that I can do something cool every week. But who know what other stuff I may have to do.
