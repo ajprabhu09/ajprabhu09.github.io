@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Recursion - A superpower "
-categories: algorithms, datastructures
+categories: algorithms
 ---
 
 Ever thought about how recursion works, why functions use a stack (why not a queue ?) and how people seemingly are able to weild this super power to solve some problems which at first look like they cant be solved at all.
