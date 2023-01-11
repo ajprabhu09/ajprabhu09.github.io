@@ -1,6 +1,6 @@
 ---
 layout: password
-title: Private Pages
+title: private
 permalink: /password/
-published: false
+# published: false
 ---
