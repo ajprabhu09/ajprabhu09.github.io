@@ -42,7 +42,7 @@ collections:
   # lols:
   #   output: true
     
-    
+markdown: kramdown 
 # permalink: /chtsheet/:output_ext
 # include:
 #   - _cheatsheets/
