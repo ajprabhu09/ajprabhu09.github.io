@@ -12,9 +12,12 @@ hash = hashlib.sha1(passw.encode()).hexdigest()
 
 file = f"""---
 layout: post
-title: {passw}
+title: ""
 permalink: /password/{hash}/
+published: false
 ---
+### {passw}
+
 put your protected content here
 
 """
