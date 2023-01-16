@@ -82,11 +82,11 @@ to use
 ```C
 typedef struct {
     volatile uint32_t A;
-    SMART_PAD(0xBAADBEEF, 0xBAADBEEF+0x8, uint32_t);
+    SMART_PAD(0xBAADBEEF, 0xBAADBEEF+0x8, uint32_t)
     volatile uint32_t B;
-    SMART_PAD(0xBAADBEEF+0x8, 0xBAADBEEF+0x10, uint32_t);
+    SMART_PAD(0xBAADBEEF+0x8, 0xBAADBEEF+0x10, uint32_t)
     volatile uint32_t C;
-    SMART_PAD(0xBAADBEEF+0x10, 0xBAADBEEF+0x18, uint32_t);
+    SMART_PAD(0xBAADBEEF+0x10, 0xBAADBEEF+0x18, uint32_t)
     volatile uint32_t D;
 } mmio_peripheral_t;
 ```
