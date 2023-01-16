@@ -51,7 +51,46 @@ The above code is more readable. `ABCD` can represent command registers in the p
 Another instance of the same peripheral can be instantiated in a similar way without having to rewrite any existing code.
 This struct can even be printed using GDB!
 
-## Casting pointers
+### what about padding between members of a peripheral ?
+
+There is simple way to deal with them.
+
+let say in the previous example there is 4 byte pad between each register. We can simply add a char array in between to account of that.
+
+```C
+typedef struct {
+    volatile uint32_t A;
+    char pad1[4];
+    volatile uint32_t B;
+    char pad2[4];
+    volatile uint32_t C;
+    char pad3[4];
+    volatile uint32_t D;
+} mmio_peripheral_t;
+```
+Some people argue doing this is wasting space as the `char` padding is just taking up memory. But this is not the case. If you see the generated assembly for the above struct, the compiler simply does an appropriate offset addition instead of an actual allocation, which is correct when you think about it as the MMIO registers are already allocated with padding between them and a cast is just a reinterpretation of a memory region based on a type.
+
+## A Useful macro for padding struct fields!
+
+```C
+#define PAD(size, a) char pad##a[size];
+#define SMART_PAD(a, b, prev_T) PAD(b - a - sizeof(prev_T), a);
+```
+This is a macro which generates a  padding based on the previous type and the starting ending address of the fields which should alleviate the repeated code of adding a `char padx[size]` in your code and also document the starting and ending addresses of the fields.
+
+to use
+```C
+typedef struct {
+    volatile uint32_t A;
+    SMART_PAD(0xBAADBEEF, 0xBAADBEEF+0x8, uint32_t);
+    volatile uint32_t B;
+    SMART_PAD(0xBAADBEEF+0x8, 0xBAADBEEF+0x10, uint32_t);
+    volatile uint32_t C;
+    SMART_PAD(0xBAADBEEF+0x10, 0xBAADBEEF+0x18, uint32_t);
+    volatile uint32_t D;
+} mmio_peripheral_t;
+```
+
 
 
 
