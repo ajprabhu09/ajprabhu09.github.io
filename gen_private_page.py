@@ -1,3 +1,4 @@
+#! /usr/bin/python3
 import os
 import hashlib
 import sys
@@ -11,7 +12,7 @@ hash = hashlib.sha1(passw.encode()).hexdigest()
 
 file = f"""---
 layout: post
-title: 
+title: {passw}
 permalink: /password/{hash}/
 ---
 put your protected content here
