@@ -11,7 +11,9 @@ My Interests include
 2. Distributed Systems
 3. Machine Learning
 
-I'm currently looking for Summer 2023 internship so if you have opening please contact me on 
+~~I'm currently looking for Summer 2023 internship so if you have opening please contact me on~~ 
+
+You can contact me on
 
 <amprabhu@andrew.cmu.edu> / <ajinkyaprabhu97@gmail.com>
 
