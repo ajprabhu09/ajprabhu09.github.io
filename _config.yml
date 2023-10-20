@@ -35,6 +35,17 @@ plugins:
 # url: https://ajprabhu09.github.io  # the base hostname and protocol for your site, e.g. http://example.com
 # baseurl: /REPOSITORY-NAME/      # place folder name if the site is served in a subfolder
 permalink: /blog/:categories/:year/:month/:day/:title:output_ext
+
+collections:
+  cheatsheets:
+      output: true
+  # lols:
+  #   output: true
+    
+markdown: kramdown 
+# permalink: /chtsheet/:output_ext
+# include:
+#   - _cheatsheets/
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

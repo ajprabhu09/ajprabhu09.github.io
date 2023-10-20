@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Using Core Utils effectively"
+date: Wed Jul 19 05:05:19 PDT 2023
+categories: welcome
+published: true 
+---
+
+## Background
+
+During my internship at qualcomm I had to debug a ton of C++ code. A fortunate or unfortunate fact of this entailed looking at binaries and how they get compiled. This lead me down some interesting rabit holes on the C++ language, Bugs in the GCC compiler and how some tools in the GNU exist that help, no fancy IDEs.

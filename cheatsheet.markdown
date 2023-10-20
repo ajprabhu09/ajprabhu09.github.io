@@ -1,16 +1,12 @@
 ---
 layout: page
-title: Blog
-permalink: /blog/
+title: Cheatsheets
+permalink: /cheatsheets/
 ---
-
-{%- if site.posts.size > 0 -%}
-<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+{%- if site.cheatsheets.size > 0 -%}
 <ul class="post-list">
-  {%- for post in site.posts -%}
+  {%- for post in site.cheatsheets -%}
   <li>
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
     <h3>
       <a class="post-link" href="{{ post.url | relative_url }}">
         {{ post.title | escape }}
